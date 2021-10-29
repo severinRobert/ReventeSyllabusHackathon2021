@@ -3,40 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulaire</title>
-    <script src="index.js"></script>
+    <script src="formulaire.js"></script>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <form action="/action_page.php">
+    <form action="#" onsubmit="submitForm(this)">
         <label for="offreDemande">Vous voulez:</label>
-
-        <select id="offreDemande">
+        <select id="offreDemande" onchange="changeForm(this);">
             <option value="">Choisissez</option>
-            <option value="offre">Demande</option>
-            <option value="demande">Offre</option>
+            <option value="offre"   >Offre</option>
+            <option value="demande">Demande</option>
         </select><br>
+
         <label for="mail">mail:</label><br>
         <input type="email" id="mail" name="mail" value="@students.ephec.be"><br>
+
         <label for="IDLivre">ID du livre</label><br>
         <input type="number" id="IDLivre" name="IDLivre" placeholder="ID du Livre"><br><br>
-        <label for="etat">Etat du livre</label><br>
-        <select id="etat">
-            <option value="">Choisissez</option>
-            <option value="neuf">Neuf</option>
-            <option value="cNeuf">Comme neuf</option>
-            <option value="utilise">Utilisé</option>
-        </select><br>
+
         <label for="prix">prix</label><br>
         <input type="number" id="prix" name="prix" placeholder="0"> €<br><br>
-        <label for="image">Image du livre</label><br>
-        <input type="file" id="image" name="image"><br><br>
-        <label for="description">Description</label><br>
-        <textarea id="description" placeholder="Décrire l'état du livre">
+        <section id="optionOffre"></section>
 
-        </textarea>
-        <br><br>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Envoyer">
     </form>
 </body>
 </html>
