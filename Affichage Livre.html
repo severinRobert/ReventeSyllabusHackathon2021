@@ -6,6 +6,12 @@
 </head>
 <body>
 <header>
+    <nav>
+        <img src="Ephec%20Seconde%20main.png" height="50" width="200">
+        <a href="index.html">home</a>
+        <a href="Affichage%20Livre.html">achat</a>
+        <a href="formulaire.html">vente</a>
+    </nav>
     <form>
         <input type="text" name="search bare" placeholder="Recherche numéro Duc ou titre">
         <button>Research</button>
@@ -19,6 +25,7 @@
         <th>Nom</th>
         <th>Etat</th>
         <th>Description</th>
+        <th>Localisation</th>
         <th>Prix</th>
         <th>achat</th>
     </tr>
@@ -26,21 +33,26 @@
     <tr>
         <td>N°1</td>
         <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
-        <td><a href="index.html">Logiciel et informatique de gestion</a></td>
+        <td>Logiciel et informatique de gestion</td>
         <td>Bonne qualité</td>
         <td>Mon tres cher livre avec qui j'ai passer de bon moment</td>
+        <td>Louvain-la-Neuve</td>
         <td>10€</td>
-        <td><button>achat</button></td>
+        <td><form><button type="submit" formaction="index.html" >achat</button></form></td>
     </tr>
     <tr>
         <td>N°2</td>
         <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
-        <td><a href="index.html">Logiciel et informatique de gestion</a></td>
+        <td>Logiciel et informatique de gestion</a></td>
         <td>Bonne qualité</td>
         <td>Mon tres cher livre avec qui j'ai passer de bon moment</td>
+        <td>Woluwe</td>
         <td>10€</td>
-        <td><button>achat</button></td>
+        <td><form><button type="submit" formaction="index.html" >achat</button></form></td>
     </tr>
 </table>
+<footer>
+    <p class="Right">2021 - Hackathon</p>
+</footer>
 </body>
 </html>
