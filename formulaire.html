@@ -7,23 +7,29 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
+    <nav>
+        <img src="Ephec%20Seconde%20main.png" height="50" width="200">
+        <a href="Demandes.html">Demandes</a>
+        <a href="Offres.html">Offres</a>
+        <a href="formulaire.html">Ajouter une Offre/Demande</a>
+    </nav>
     <form action="#" onsubmit="submitForm(this)">
         <label for="offreDemande">Vous voulez:</label>
-        <select id="offreDemande" onchange="changeForm(this);">
+        <select id="offreDemande" onchange="changeForm(this);" required>
             <option value="">Choisissez</option>
             <option value="offre"   >Offre</option>
             <option value="demande">Demande</option>
         </select><br>
 
         <label for="mail">mail:</label><br>
-        <input type="email" id="mail" name="mail" value="@students.ephec.be"><br>
+        <input type="email" id="mail" name="mail" value="@students.ephec.be" required><br>
 
         <label for="IDLivre">ID du livre</label><br>
-        <input type="number" id="IDLivre" name="IDLivre" placeholder="ID du Livre"><br><br>
+        <input type="number" id="IDLivre" name="IDLivre" placeholder="ID du Livre" required><br><br>
 
         <label for="prix">prix</label><br>
-        <input type="number" id="prix" name="prix" placeholder="0"> €<br><br>
-        <section id="optionOffre"></section>
+        <input type="number" id="prix" name="prix" placeholder="0" required> €<br><br>
+        <section id="optionOffre" name="optionOffre"></section>
 
 
         <input type="submit" value="Envoyer">
