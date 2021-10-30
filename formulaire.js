@@ -25,6 +25,8 @@ function submitForm(form) {
     let mail = form.mail.value
     let IDDuc = form.IDLivre.value
     let prix = form.prix.value
+    let nom = form.nom.value
+    let localisation = form.localisation.value
 
     if(offreDemande == '') {
         alert("Vous n'avez pas sélectionné ")
@@ -35,21 +37,25 @@ function submitForm(form) {
         console.log(image);
         if(confirm(`Merci de vérifier les données :\n 
                     Type Demande/Offre : ${offreDemande} \n 
+                    Localisation : ${localisation} \n 
                     Mail : ${mail} \n 
                     ID Duc : ${IDDuc} \n
+                    Intitulé : ${nom} \n
                     Prix : ${prix} \n
                     Etat : ${etat} \n
                     description : ${description}`)) {
-            //add_offre(IDDuc, mail, localisation, etat, prix, description, image)
-            console.log("confirm est ok")
+            add_offre(IDDuc, nom, mail, localisation, etat, prix, description, image)
+
         }
     } else if(confirm(`Merci de vérifier les données :\n 
                     Type Demande/Offre : ${offreDemande} \n 
+                    Localisation : ${localisation} \n 
                     Mail : ${mail} \n 
                     ID Duc : ${IDDuc} \n
+                    Intitulé : ${nom} \n
                     Prix : ${prix} \n`)) {
-        //add_offre(IDDuc, mail, localisation, prix)
-        console.log("confirm est ok")
+        add_demande(IDDuc, nom, mail, localisation, prix)
+        console.log(IDDuc, nom, mail, localisation, prix)
     }
 
 }

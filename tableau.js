@@ -1,8 +1,7 @@
-let OffreLivre = {"1":[{mail : "mail@students.ephec.be", localisation : "Woluwe", etat : "neuf", prix : "12", description : "oui", nom : "Logiciel et informatique de gestion"}]};
-let DemandeLivre = {"1":[{mail : "mail@students.ephec.be", localisation : "Woluwe", prix : "12", nom : "Logiciel et informatique de gestion"}]};
 
 function loadPageOffre() {
     document.getElementById("rechercheOffre").addEventListener("click", rechercherOffre);
+    OffreLivre = lireOffre()
 }
 
 function loadPageDemande() {
@@ -23,8 +22,9 @@ function add_offre(IDDuc, nom, mail, localisation, etat, prix, description, imag
     }else{
         OffreLivre[IDDuc] = [newObj];
     }
+    ecrireOffre(OffreLivre)
 }
-function add_demande(IDDuc, nom, mail, localisaton, prix){
+function add_demande(IDDuc, nom, mail, localisation, prix){
     let newObj = new Object();
     newObj.nom = nom;
     newObj.mail = mail;
