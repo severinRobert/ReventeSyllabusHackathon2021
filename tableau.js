@@ -24,7 +24,7 @@ function add_offre(IDDuc, nom, mail, localisation, etat, prix, description, imag
         OffreLivre[IDDuc] = [newObj];
     }
 }
-function add_demande(IDDuc, nom, mail, localisaton, prix){
+function add_demande(IDDuc, nom, mail, localisation, prix){
     let newObj = new Object();
     newObj.nom = nom;
     newObj.mail = mail;

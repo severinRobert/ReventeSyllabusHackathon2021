@@ -40,7 +40,7 @@ function submitForm(form) {
                     Prix : ${prix} \n
                     Etat : ${etat} \n
                     description : ${description}`)) {
-            //add_offre(IDDuc, mail, localisation, etat, prix, description, image)
+            add_offre(IDDuc, mail, localisation, etat, prix, description, image)
             console.log("confirm est ok")
         }
     } else if(confirm(`Merci de vérifier les données :\n 
@@ -48,8 +48,8 @@ function submitForm(form) {
                     Mail : ${mail} \n 
                     ID Duc : ${IDDuc} \n
                     Prix : ${prix} \n`)) {
-        //add_offre(IDDuc, mail, localisation, prix)
-        console.log("confirm est ok")
+            add_offre(IDDuc, mail, localisation, prix)
+            console.log("confirm est ok")
     }
 
 }
