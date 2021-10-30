@@ -80,3 +80,28 @@ function rechercherDemande() {
     }
     document.getElementById("donneeTableau").innerHTML = html;
 }
+
+
+function triDemande(){
+    let IDDuc = document.getElementById("demande").value;
+    let html = ""
+    for(let i in DemandeLivre[IDDuc]) {
+        console.log(i)
+        if (DemandeLivre[IDDuc][i].localisation == document.getElementById("recherche").value) {
+            html += `<tr>
+                <td>N°${i}</td>
+                <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
+                <td>${DemandeLivre[IDDuc][i].nom}</td>
+                <td>${DemandeLivre[IDDuc][i].localisation}</td>
+                <td>${DemandeLivre[IDDuc][i].prix}€</td>
+                <td>
+                    <form>
+                        <a href="mailto:${OffreLivre[IDDuc][i].mail}?subject=livre occasion">contact</a>
+                    </form>
+                </td>
+            </tr>`
+        }
+        document.getElementById("donneeTableau").innerHTML = html;
+        }
+    }
+}
