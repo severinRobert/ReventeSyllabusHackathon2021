@@ -51,8 +51,8 @@ function rechercherOffre() {
                 <td>${OffreLivre[IDDuc][i].localisation}</td>
                 <td>${OffreLivre[IDDuc][i].prix}€</td>
                 <td>
-                    <form>
-                        <button type="submit" formAction="index.html">achat</button>
+                    <form>  
+                        <a href="mailto:${OffreLivre[IDDuc][i].mail}?subject=livre occasion">contact</a>
                     </form>
                 </td>
             </tr>`
