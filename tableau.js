@@ -1,22 +1,82 @@
-let OffreLivre = {};
-let DemandeLivre = {};
-function add_offre(IDDuc, mail, localisation, etat, prix, description, image){
+
+function loadPageOffre() {
+    document.getElementById("rechercheOffre").addEventListener("click", rechercherOffre);
+    OffreLivre = lireOffre()
+}
+
+function loadPageDemande() {
+    document.getElementById("rechercheDemande").addEventListener("click", rechercherDemande);
+}
+
+function add_offre(IDDuc, nom, mail, localisation, etat, prix, description, image){
     let newObj = new Object();
+    newObj.nom = nom;
     newObj.mail = mail;
     newObj.localisation = localisation;
     newObj.etat = etat;
     newObj.prix = prix;
     newObj.description = description;
     newObj.image = image;
-    if (OffreLivre.hasOwnProperty(IDDuc)){
-        OffreLivre.IDDuc.push(newObj);
+    if (IDDuc in OffreLivre){
+        OffreLivre[IDDuc].push(newObj);
     }else{
-        OffreLivre.IDDuc[newObj];
+        OffreLivre[IDDuc] = [newObj];
+    }
+    ecrireOffre(OffreLivre)
+}
+function add_demande(IDDuc, nom, mail, localisation, prix){
+    let newObj = new Object();
+    newObj.nom = nom;
+    newObj.mail = mail;
+    newObj.localisation = localisation;
+    newObj.prix = prix;
+    if (IDDuc in DemandeLivre){
+        DemandeLivre[IDDuc].push(newObj);
+    }else {
+        DemandeLivre[IDDuc] = [newObj];
     }
 }
-function add_demande(IDDuc, mail, localisaton, prix){
-    DemandeLivre.IDDuc += new Object();
-    DemandeLivre.IDDuc.mail = mail;
-    DemandeLivre.IDDuc.localisation = localisaton;
-    DemandeLivre.IDDuc.prix = prix;
+
+function rechercherOffre() {
+    let IDDuc = document.getElementById("offre").value;
+    let html = ""
+    for(let i in OffreLivre[IDDuc]) {
+        console.log(i)
+        html += `<tr>
+                <td>N°${i}</td>
+                <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
+                <td>${OffreLivre[IDDuc][i].nom}</td>
+                <td>${OffreLivre[IDDuc][i].etat}</td>
+                <td>${OffreLivre[IDDuc][i].description}</td>
+                <td>${OffreLivre[IDDuc][i].localisation}</td>
+                <td>${OffreLivre[IDDuc][i].prix}€</td>
+                <td>
+                    <form>  
+                        <a href="mailto:${OffreLivre[IDDuc][i].mail}?subject=livre occasion">contact</a>
+                    </form>
+                </td>
+            </tr>`
+    }
+    document.getElementById("donneeTableau").innerHTML = html;
+}
+
+function rechercherDemande() {
+    let IDDuc = document.getElementById("demande").value;
+    let html = ""
+    for(let i in DemandeLivre[IDDuc]) {
+        console.log(i)
+        html += `<tr>
+                <td>N°${i}</td>
+                <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
+                <td>${DemandeLivre[IDDuc][i].nom}</td>
+                <td>${DemandeLivre[IDDuc][i].localisation}</td>
+                <td>${DemandeLivre[IDDuc][i].prix}€</td>
+                <td>
+                    <form>
+                        <a href="mailto:${OffreLivre[IDDuc][i].mail}?subject=livre occasion">contact</a>
+                    </form>
+                </td>
+            </tr>`
+    }
+    document.getElementById("donneeTableau").innerHTML = html;
 }

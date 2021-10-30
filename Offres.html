@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Affichage Livre</title>
     <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="gestionDB.js"></script>
+    <script type="text/javascript" src="tableau.js"></script>
 </head>
-<body>
+<body onload="loadPageOffre()">
 <header>
     <nav>
         <img src="Ephec%20Seconde%20main.png" height="50" width="200">
@@ -14,14 +16,12 @@
         <a href="formulaire.html">Ajouter une Offre/Demande</a>
     </nav>
     <hr>
-    <form>
         <div class="reset">
             <div id="divSearch">
-                <input type="text" name="search bare" id="searchbar" placeholder="Recherche numéro Duc ou titre">
+                <input type="text" name="search bare" id="offre" placeholder="Recherche numéro Duc ou titre">
             </div>
-        <button id="button-submit">Research</button>
+        <button id="rechercheOffre">Research</button>
         </div>
-    </form>
 </header>
 <br>
 <table border="1">
@@ -37,36 +37,9 @@
         <th>achat</th>
     </tr>
     </thead>
-    <tr>
-        <td>N°1</td>
-        <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
-        <td>Logiciel et informatique de gestion</td>
-        <td>Bonne qualité</td>
-        <td>Mon tres cher livre avec qui j'ai passer de bon moment</td>
-        <td>Louvain-la-Neuve</td>
-        <td>10€</td>
-        <td><form><button type="submit" formaction="index.html" >achat</button></form></td>
-    </tr>
-    <tr>
-        <td>N°1</td>
-        <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
-        <td>Logiciel et informatique de gestion</td>
-        <td>Bonne qualité</td>
-        <td>Mon tres cher livre avec qui j'ai passer de bon moment</td>
-        <td>Louvain-la-Neuve</td>
-        <td>10€</td>
-        <td><form><button type="submit" formaction="index.html" >achat</button></form></td>
-    </tr>
-    <tr>
-        <td>N°2</td>
-        <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
-        <td>Logiciel et informatique de gestion</a></td>
-        <td>Bonne qualité</td>
-        <td>Mon tres cher livre avec qui j'ai passer de bon moment</td>
-        <td>Woluwe</td>
-        <td>10€</td>
-        <td><form><button type="submit" formaction="index.html" >achat</button></form></td>
-    </tr>
+    <tbody id="donneeTableau">
+
+    </tbody>
 </table>
 
 <footer>

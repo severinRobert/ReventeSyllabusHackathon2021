@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Formulaire</title>
     <script src="formulaire.js"></script>
+    <script type="text/javascript" src="gestionDB.js"></script>
+    <script type="text/javascript" src="tableau.js"></script>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -24,22 +26,33 @@
             <option value="demande">Demande</option>
         </select><br>
 
-        <label for="mail">mail:</label><br>
+        <label for="localisation">Localisation:</label>
+        <select id="localisation" required>
+            <option value="">Choisissez</option>
+            <option value="wolluwe">Wolluwe</option>
+            <option value="lln">LLN</option>
+            <option value="schaerbeek">schaerbeek</option>
+        </select><br>
+
+        <label for="mail">Mail:</label><br>
         <input type="email" id="mail" name="mail" value="@students.ephec.be" required><br>
 
         <label for="IDLivre">ID du livre</label><br>
         <input type="number" id="IDLivre" name="IDLivre" placeholder="ID du Livre" required><br>
+
+        <label for="nom">Nom du livre</label><br>
+        <input type="text" id="nom" name="nom" placeholder="Intitulé du syllabus" required><br>
 
         <label for="prix">prix</label><br>
         <input type="number" id="prix" name="prix" placeholder="0" required> €<br>
         <section id="optionOffre" name="optionOffre"></section>
 
 
-        <input id="button-submit" type="submit" value="Envoyer">
+        <input id="rechercheOffre" type="submit" value="Envoyer">
     </form>
     <footer>
         <hr>
-        <p class="center">2021 - Hackathon</p>
+        <p class="center">© 2021 - Hackathon</p>
     </footer>
 </body>
 </html>

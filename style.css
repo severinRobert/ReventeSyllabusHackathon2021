@@ -72,7 +72,7 @@ footer hr {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-#searchbar{
+#demande,offre{
     height: 30px;
     width: 500px;
     outline: none;
@@ -95,7 +95,7 @@ footer hr {
     display: flex;
 }
 
-#button-submit {
+#rechercheOffre {
     background: #6A6F75;
     border-width: 0px;
     padding: 8px 0px;
@@ -110,16 +110,16 @@ footer hr {
     border-radius: 8px;
 }
 
-#button-submit:hover {
+#rechercheOffre:hover {
     background: #4f5356;
 }
 
-#button-submit:active {
+#rechercheOffre:active {
     background: #5b5d60;
     outline: none;
 }
 
-#button-submit::-moz-focus-inner {
+#rechercheOffre::-moz-focus-inner {
     border: 0;
 }
 
