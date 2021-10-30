@@ -25,7 +25,6 @@ function add_offre(IDDuc, nom, mail, localisation, etat, prix, description, imag
     }else{
         OffreLivre[IDDuc] = [newObj];
     }
-    ecrireOffre(OffreLivre)
 }
 function add_demande(IDDuc, nom, mail, localisation, prix){
     let newObj = new Object();
