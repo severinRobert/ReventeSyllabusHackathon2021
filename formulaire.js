@@ -1,4 +1,6 @@
-let optionsOffre = '<label for="etat">Etat du livre</label><br>' +
+let optionsOffre = '<label for="prix">prix:</label>\n' +
+                '<input type="number" id="prix" name="prix" placeholder="0" required> €' +
+                '<br><label for="etat">Etat du livre</label><br>' +
     '<select id="etat" required>' +
         '<option value="">Choisissez</option>' +
         '<option value="neuf">Neuf</option>' +

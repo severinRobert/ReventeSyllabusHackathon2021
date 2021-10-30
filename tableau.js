@@ -1,3 +1,6 @@
+let OffreLivre = {"1":[{nom:"", mail:"",localisation:"lln", etat:"", prix:"", description:"", image:""}]}
+let DemandeLivre = {"1":[{nom:"", mail:"",localisation:"wolluwe", etat:"", prix:"", description:"", image:""}]}
+
 
 function chercherData(route,type){
     let data
@@ -9,7 +12,6 @@ function chercherData(route,type){
         console.log("onload fonctionne");
     };
     xhr.send();
-    //return xhr
 }
 
 function loadPageOffre() {
@@ -93,4 +95,56 @@ function rechercherDemande() {
             </tr>`
     }
     document.getElementById("donneeTableau").innerHTML = html;
+
+}
+function triDemande(){
+    let loc = document.getElementById("localisation").value;
+    let IDDuc = document.getElementById("demande").value;
+    console.log(loc)
+    let html = ""
+    for (let i in OffreLivre[IDDuc]) {
+        console.log(i)
+        if (DemandeLivre[IDDuc][i].localisation === document.getElementById("localisation").value) {
+            html += `<tr>
+                <td>N°${i}</td>
+                <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
+                <td>${DemandeLivre[IDDuc][i].nom}</td>
+                <td>${DemandeLivre[IDDuc][i].localisation}</td>
+                <td>${DemandeLivre[IDDuc][i].prix}€</td>
+                <td>
+                    <form>  
+                        <a href="mailto:${DemandeLivre[IDDuc][i].mail}?subject=livre occasion">contact</a>
+                    </form>
+                </td>
+            </tr>`
+        }
+        document.getElementById("donneeTableau").innerHTML = html;
+    }
+}
+
+function triOffre() {
+    let loc = document.getElementById("localisation").value;
+    let IDDuc = document.getElementById("offre").value;
+    console.log(loc)
+    let html = ""
+    for (let i in OffreLivre[IDDuc]) {
+        console.log(i)
+        if (OffreLivre[IDDuc][i].localisation === document.getElementById("localisation").value) {
+            html += `<tr>
+                <td>N°${i}</td>
+                <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
+                <td>${OffreLivre[IDDuc][i].nom}</td>
+                <td>${OffreLivre[IDDuc][i].etat}</td>
+                <td>${OffreLivre[IDDuc][i].description}</td>
+                <td>${OffreLivre[IDDuc][i].localisation}</td>
+                <td>${OffreLivre[IDDuc][i].prix}€</td>
+                <td>
+                    <form>  
+                        <a href="mailto:${OffreLivre[IDDuc][i].mail}?subject=livre occasion">contact</a>
+                    </form>
+                </td>
+            </tr>`
+        }
+        document.getElementById("donneeTableau").innerHTML = html;
+    }
 }
