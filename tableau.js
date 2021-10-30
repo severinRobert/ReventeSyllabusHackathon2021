@@ -1,19 +1,6 @@
 let OffreLivre = {"1":[{nom:"", mail:"",localisation:"lln", etat:"", prix:"", description:"", image:""}]}
 let DemandeLivre = {"1":[{nom:"", mail:"",localisation:"wolluwe", etat:"", prix:"", description:"", image:""}]}
 
-
-function chercherData(route,type){
-    let data
-    let xhr = new XMLHttpRequest();
-    xhr.open(type, route, true);
-    xhr.onload = function() {
-        console.log(this.responseText);
-        data = JSON.parse(this.responseText);
-        console.log("onload fonctionne");
-    };
-    xhr.send();
-}
-
 function loadPageOffre() {
     document.getElementById("rechercheOffre").addEventListener("click", rechercherOffre);
 }
