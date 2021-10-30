@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
+    <script src="tableau.js"></script>
     <title>Affichage Livre</title>
 </head>
-<body>
+<body onload="loadPageDemande()">
 <header>
     <nav>
         <img src="Ephec%20Seconde%20main.png" height="50" width="200">
@@ -14,10 +15,8 @@
         <a href="formulaire.html">Ajouter une Offre/Demande</a>
     </nav>
     <hr>
-    <form>
-        <input type="text" name="search bare" placeholder="Recherche numéro Duc ou titre">
-        <button>Research</button>
-    </form>
+        <input type="text" id="demande" placeholder="Recherche numéro Duc ou titre">
+        <button id="rechercheDemande">Rechercher</button>
     <br>
 </header>
 <table border="1">
@@ -26,33 +25,14 @@
         <th>Id</th>
         <th></th>
         <th>Nom</th>
-        <th>Etat</th>
-        <th>Description</th>
         <th>Localisation</th>
         <th>Prix</th>
-        <th>achat</th>
+        <th>vente</th>
     </tr>
     </thead>
-    <tr>
-        <td>N°1</td>
-        <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
-        <td>Logiciel et informatique de gestion</td>
-        <td>Bonne qualité</td>
-        <td>Mon tres cher livre avec qui j'ai passer de bon moment</td>
-        <td>Louvain-la-Neuve</td>
-        <td>10€</td>
-        <td><form><button type="submit" formaction="index.html" >achat</button></form></td>
-    </tr>
-    <tr>
-        <td>N°2</td>
-        <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
-        <td>Logiciel et informatique de gestion</a></td>
-        <td>Bonne qualité</td>
-        <td>Mon tres cher livre avec qui j'ai passer de bon moment</td>
-        <td>Woluwe</td>
-        <td>10€</td>
-        <td><form><button type="submit" formaction="index.html" >achat</button></form></td>
-    </tr>
+    <tbody id="donneeTableau">
+
+    </tbody>
 </table>
 
 <footer>
