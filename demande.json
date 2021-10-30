@@ -1,0 +1,8 @@
+{
+  "1" : {
+    "nom" : "mon premier livre",
+    "mail" : "test@mail.com",
+    "localisation" : "LLN",
+    "prix" : "3"
+  }
+}
