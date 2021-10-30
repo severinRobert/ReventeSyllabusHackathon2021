@@ -13,6 +13,7 @@
         <a href="Offres.html">Offres</a>
         <a href="formulaire.html">Ajouter une Offre/Demande</a>
     </nav>
+    <hr>
     <form action="#" onsubmit="submitForm(this)">
         <label for="offreDemande">Vous voulez:</label>
         <select id="offreDemande" onchange="changeForm(this);" required>
@@ -25,14 +26,18 @@
         <input type="email" id="mail" name="mail" value="@students.ephec.be" required><br>
 
         <label for="IDLivre">ID du livre</label><br>
-        <input type="number" id="IDLivre" name="IDLivre" placeholder="ID du Livre" required><br><br>
+        <input type="number" id="IDLivre" name="IDLivre" placeholder="ID du Livre" required><br>
 
         <label for="prix">prix</label><br>
-        <input type="number" id="prix" name="prix" placeholder="0" required> €<br><br>
+        <input type="number" id="prix" name="prix" placeholder="0" required> €<br>
         <section id="optionOffre" name="optionOffre"></section>
 
 
-        <input type="submit" value="Envoyer">
+        <input id="submit" type="submit" value="Envoyer">
     </form>
+    <hr>
+    <footer>
+        <p class="Right">2021 - Hackathon</p>
+    </footer>
 </body>
 </html>
