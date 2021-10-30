@@ -1,7 +1,22 @@
-
+let OffreLivre = {1 : [{mail:"q.roeland@dtudents.ephec.be",nom:"mon premier livre",localisation:"LLN",etat:"neuf",prix:5,description:"livre de cours",image:"livre.png"},
+                      {mail:"test@dtudents.ephec.be",nom:"mon livre de cours",localisation:"LLN",etat:"presque neuf",prix:6,description:"livre de cours",image:"livre.png"},
+                      {mail:"moi@dtudents.ephec.be",nom:"un livre",localisation:"LLN",etat:"neuf",prix:5.5,description:"livre de cours",image:"livre.png"}],
+                  2 : [{mail:"quelquun@dtudents.ephec.be",nom:"livre de math",localisation:"Wolluwe",etat:"neuf",prix:5,description:"livre compléter",image:"livre.png"},
+                      {mail:"q.roeland@dtudents.ephec.be",nom:"mon premier livre",localisation:"Wolluwe",etat:"utilise",prix:4,description:"livre de cours",image:"livre.png"}],
+                  3 : [{mail:"test@dtudents.ephec.be",nom:"livre de python",localisation:"LLN",etat:"neuf",prix:5,description:"livre de cours",image:"livre.png"},
+                      {mail:"etudiant@dtudents.ephec.be",nom:"livre de python",localisation:"woluwe",etat:"neuf",prix:6,description:"livre de cours",image:"livre.png"},
+                      {mail:"moi@dtudents.ephec.be",nom:"livre de python",localisation:"LLN",etat:"neuf",prix:5.4,description:"livre de cours",image:"livre.png"}]}
+let DemandeLivre = {1 : [{mail:"q.roeland@dtudents.ephec.be",nom:"livre de cours",localisation:"LLN",prix:5},
+                        {mail:"test@dtudents.ephec.be",nom:"livre de cours ",localisation:"LLN",prix:5}],
+                    2 : [{mail:"moi@dtudents.ephec.be",nom:"mon premier livre",localisation:"Wolluwe",prix:5}]};
+document.addEventListener('DOMContentLoaded', loadPage());
+function loadPage(){
+    for (let i in OffreLivre){
+        
+    }
+}
 function loadPageOffre() {
     document.getElementById("rechercheOffre").addEventListener("click", rechercherOffre);
-    OffreLivre = lireOffre()
 }
 
 function loadPageDemande() {
@@ -29,7 +44,6 @@ function add_demande(IDDuc, nom, mail, localisation, prix){
     newObj.nom = nom;
     newObj.mail = mail;
     newObj.localisation = localisation;
-    newObj.prix = prix;
     if (IDDuc in DemandeLivre){
         DemandeLivre[IDDuc].push(newObj);
     }else {
@@ -41,7 +55,6 @@ function rechercherOffre() {
     let IDDuc = document.getElementById("offre").value;
     let html = ""
     for(let i in OffreLivre[IDDuc]) {
-        console.log(i)
         html += `<tr>
                 <td>N°${i}</td>
                 <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
@@ -64,7 +77,6 @@ function rechercherDemande() {
     let IDDuc = document.getElementById("demande").value;
     let html = ""
     for(let i in DemandeLivre[IDDuc]) {
-        console.log(i)
         html += `<tr>
                 <td>N°${i}</td>
                 <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
@@ -80,4 +92,3 @@ function rechercherDemande() {
     }
     document.getElementById("donneeTableau").innerHTML = html;
 }
-console.log(JSON.parse(offre));
