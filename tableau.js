@@ -80,3 +80,4 @@ function rechercherDemande() {
     }
     document.getElementById("donneeTableau").innerHTML = html;
 }
+console.log(JSON.parse(offre));
