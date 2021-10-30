@@ -9,25 +9,32 @@ function loadPageDemande() {
     document.getElementById("rechercheDemande").addEventListener("click", rechercherDemande);
 }
 
-function add_offre(IDDuc, mail, localisation, etat, prix, description, image){
+function add_offre(IDDuc, nom, mail, localisation, etat, prix, description, image){
     let newObj = new Object();
+    newObj.nom = nom;
     newObj.mail = mail;
     newObj.localisation = localisation;
     newObj.etat = etat;
     newObj.prix = prix;
     newObj.description = description;
     newObj.image = image;
-    if (OffreLivre.hasOwnProperty(IDDuc)){
-        OffreLivre.IDDuc.push(newObj);
+    if (IDDuc in OffreLivre){
+        OffreLivre[IDDuc].push(newObj);
     }else{
-        OffreLivre.IDDuc[newObj];
+        OffreLivre[IDDuc] = [newObj];
     }
 }
-function add_demande(IDDuc, mail, localisaton, prix){
-    DemandeLivre.IDDuc += new Object();
-    DemandeLivre.IDDuc.mail = mail;
-    DemandeLivre.IDDuc.localisation = localisaton;
-    DemandeLivre.IDDuc.prix = prix;
+function add_demande(IDDuc, nom, mail, localisaton, prix){
+    let newObj = new Object();
+    newObj.nom = nom;
+    newObj.mail = mail;
+    newObj.localisation = localisation;
+    newObj.prix = prix;
+    if (IDDuc in DemandeLivre){
+        DemandeLivre[IDDuc].push(newObj);
+    }else {
+        DemandeLivre[IDDuc] = [newObj];
+    }
 }
 
 function rechercherOffre() {
