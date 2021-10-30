@@ -10,11 +10,13 @@
 <header>
     <nav>
         <img src="Ephec%20Seconde%20main.png" height="50" width="200">
+        <div class="droite">
         <ul>
             <li><a href="Demandes.html">Demandes</a></li>
             <li><a href="Offres.html">Offres</a></li>
             <li><a href="formulaire.html">Ajouter une Offre/Demande</a></li>
         </ul>
+        </div>
     </nav>
     <hr>
     <div class="reset">
@@ -25,6 +27,12 @@
     </div>
     <br>
 </header>
+<select id="localisation" onchange="triDemande(this)">
+        <option value="">Choisir un lieu</option>
+        <option value="wolluwe">Wolluwe</option>
+        <option value="lln">LLN</option>
+        <option value="schaerbeek">Schaerbeek</option>
+</select>
 <table border="1">
     <thead>
     <tr>

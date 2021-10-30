@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <title>Affichage Livre</title>
     <link href="style.css" rel="stylesheet">
-    <script type="text/javascript" src="gestionDB.js"></script>
     <script type="text/javascript" src="tableau.js"></script>
-    <script type="text/javascript" src="offre.json"></script>
 </head>
 <body onload="loadPageOffre()">
 <header>
     <nav>
         <img src="Ephec%20Seconde%20main.png" height="50" width="200">
+        <div class="droite">
         <ul>
             <li><a href="Demandes.html">Demandes</a></li>
             <li><a href="Offres.html">Offres</a></li>
             <li><a href="formulaire.html">Ajouter une Offre/Demande</a></li>
         </ul>
+        </div>
     </nav>
     <hr>
         <div class="reset">
@@ -25,8 +25,14 @@
             </div>
         <button id="rechercheOffre">Research</button>
         </div>
+    <br>
 </header>
-<br>
+<select id="localisation" name="test" onchange="triOffre()">
+    <option value="">Choisir un lieu</option>
+    <option value="wolluwe">Wolluwe</option>
+    <option value="lln">LLN</option>
+    <option value="schaerbeek">Schaerbeek</option>
+</select>
 <table border="1">
     <thead>
     <tr>
@@ -37,7 +43,7 @@
         <th>Description</th>
         <th>Localisation</th>
         <th>Prix</th>
-        <th>achat</th>
+        <th>Achat</th>
     </tr>
     </thead>
     <tbody id="donneeTableau">

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Formulaire</title>
     <script src="formulaire.js"></script>
-    <script type="text/javascript" src="gestionDB.js"></script>
     <script type="text/javascript" src="tableau.js"></script>
     <link href="style.css" rel="stylesheet">
 </head>
@@ -12,11 +11,13 @@
     <header>
         <nav>
             <img src="Ephec%20Seconde%20main.png" height="50" width="200">
+            <div class="droite">
             <ul>
                 <li><a href="Demandes.html">Demandes</a></li>
                 <li><a href="Offres.html">Offres</a></li>
                 <li><a href="formulaire.html">Ajouter une Offre/Demande</a></li>
             </ul>
+            </div>
         </nav>
         <hr>
     </header>
@@ -47,9 +48,7 @@
 
         <label for="nom">Nom du livre:</label>
         <input type="text" id="nom" name="nom" placeholder="Intitulé du syllabus" required><br><br>
-
-        <label for="prix">prix:</label>
-        <input type="number" id="prix" name="prix" placeholder="0" required> €<br>
+            
         <section id="optionOffre" name="optionOffre"></section>
         </fieldset>
 
