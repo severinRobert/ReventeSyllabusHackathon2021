@@ -7,13 +7,15 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <img src="Ephec%20Seconde%20main.png" height="50" width="200">
-        <a href="Demandes.html">Demandes</a>
-        <a href="Offres.html">Offres</a>
-        <a href="formulaire.html">Ajouter une Offre/Demande</a>
-    </nav>
-    <hr>
+    <header>
+        <nav>
+            <img src="Ephec%20Seconde%20main.png" height="50" width="200">
+            <a href="Demandes.html">Demandes</a>
+            <a href="Offres.html">Offres</a>
+            <a href="formulaire.html">Ajouter une Offre/Demande</a>
+        </nav>
+        <hr>
+    </header>
     <form action="#" onsubmit="submitForm(this)">
         <label for="offreDemande">Vous voulez:</label>
         <select id="offreDemande" onchange="changeForm(this);" required>
@@ -35,8 +37,8 @@
 
         <input id="submit" type="submit" value="Envoyer">
     </form>
-    <hr>
     <footer>
+        <hr>
         <p class="Right">2021 - Hackathon</p>
     </footer>
 </body>

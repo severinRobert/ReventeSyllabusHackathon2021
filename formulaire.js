@@ -6,9 +6,9 @@ let optionsOffre = '<label for="etat">Etat du livre</label><br>' +
         '<option value="utilise">Utilisé</option>' +
     '</select><br>' +
     '<label for="image">Image du livre</label><br>' +
-    '<input type="file" id="image" name="image" required><br><br>' +
+    '<input type="file" id="image" name="image"><br><br>' +
         '<label for="description">Description</label><br>' +
-        '<textarea id="description" placeholder="Décrire l\'état du livre" required>' +
+        '<textarea id="description" placeholder="Décrire l\'état du livre">' +
         '</textarea>' +
         '<br><br>'
 
