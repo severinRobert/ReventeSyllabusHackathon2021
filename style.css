@@ -11,7 +11,7 @@ nav{
     padding: 0;
 
     text-align: center;
-    justify-content: space-around;
+
     align-items: center;
 
     font-size: larger;
@@ -62,7 +62,7 @@ form #description{
 }
 footer{
     box-sizing: content-box;
-    position:absolute;
+    position:relative;
     bottom: 0;
     width: 99%;
 }
@@ -81,7 +81,7 @@ footer hr {
     border: none;
 }
 
-#offre{
+#offre,demande{
     height: 30px;
     width: 500px;
     outline: none;
@@ -117,20 +117,41 @@ footer hr {
     margin-top: 1px;
     border-radius: 8px;
 }
+#rechercheDemande {
+    background: #6A6F75;
+    border-width: 0px;
+    padding: 8px 0px;
+    width: 10%;
+    cursor: pointer;
+    font: bold 12px Arial, Helvetica;
+    color: #fff;
+    text-shadow: 0 1px 0 #555;
+    margin-right: auto;
+    margin-left: 3px;
+    margin-top: 1px;
+    border-radius: 8px;
+}
 
 #rechercheOffre:hover {
     background: #4f5356;
 }
-
+#rechercheDemande:hover {
+    background: #4f5356;
+}
 #rechercheOffre:active {
     background: #5b5d60;
     outline: none;
 }
-
+#rechercheDemande:active {
+    background: #5b5d60;
+    outline: none;
+}
 #rechercheOffre::-moz-focus-inner {
     border: 0;
 }
-
+#rechercheDemande::-moz-focus-inner {
+    border: 0;
+}
 table{
     border-collapse:collapse;
     margin-top: 5px;
@@ -215,4 +236,8 @@ li a {
 
 li a:hover {
     background-color: gray;
+}
+
+.droite{
+    margin-left: auto;
 }
