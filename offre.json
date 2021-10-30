@@ -1,5 +1,5 @@
 {
-  "1" : {
+  "1" : [{
     "nom" : "mon premier livre",
     "mail" : "test@mail.com",
     "localisation" : "LLN",
@@ -7,5 +7,5 @@
     "prix" : "3",
     "description" : "RAS",
     "image" : "livre.jpg"
-  }
+  }]
 }

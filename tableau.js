@@ -1,7 +1,19 @@
 
+function chercherData(route,type){
+    let data
+    let xhr = new XMLHttpRequest();
+    xhr.open(type, route, true);
+    xhr.onload = function() {
+        console.log(this.responseText);
+        data = JSON.parse(this.responseText);
+        console.log("onload fonctionne");
+    };
+    xhr.send();
+    //return xhr
+}
+
 function loadPageOffre() {
     document.getElementById("rechercheOffre").addEventListener("click", rechercherOffre);
-    OffreLivre = lireOffre()
 }
 
 function loadPageDemande() {
@@ -40,6 +52,7 @@ function add_demande(IDDuc, nom, mail, localisation, prix){
 function rechercherOffre() {
     let IDDuc = document.getElementById("offre").value;
     let html = ""
+
     for(let i in OffreLivre[IDDuc]) {
         console.log(i)
         html += `<tr>
@@ -63,6 +76,7 @@ function rechercherOffre() {
 function rechercherDemande() {
     let IDDuc = document.getElementById("demande").value;
     let html = ""
+    DemandeLivre = chercherData("","GET")
     for(let i in DemandeLivre[IDDuc]) {
         console.log(i)
         html += `<tr>
@@ -80,4 +94,3 @@ function rechercherDemande() {
     }
     document.getElementById("donneeTableau").innerHTML = html;
 }
-console.log(JSON.parse(offre));
