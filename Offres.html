@@ -6,6 +6,7 @@
     <link href="style.css" rel="stylesheet">
     <script type="text/javascript" src="gestionDB.js"></script>
     <script type="text/javascript" src="tableau.js"></script>
+    <script type="text/javascript" src="offre.json"></script>
 </head>
 <body onload="loadPageOffre()">
 <header>
@@ -16,8 +17,12 @@
         <a href="formulaire.html">Ajouter une Offre/Demande</a>
     </nav>
     <hr>
-        <input type="text" id="offre" placeholder="Recherche numéro Duc ou titre">
-        <button id="rechercheOffre">Rechercher</button>
+        <div class="reset">
+            <div id="divSearch">
+                <input type="text" name="search bare" id="offre" placeholder="Recherche numéro Duc ou titre">
+            </div>
+        <button id="rechercheOffre">Research</button>
+        </div>
 </header>
 <br>
 <table border="1">
@@ -40,7 +45,7 @@
 
 <footer>
     <hr>
-    <p class="Right">2021 - Hackathon</p>
+    <p class="center">© 2021 - Hackathon</p>
 </footer>
 </body>
 </html>
