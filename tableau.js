@@ -9,18 +9,58 @@ let OffreLivre = {"1" : [{mail:"q.roeland@dtudents.ephec.be",nom:"mon premier li
 let DemandeLivre = {"1" : [{mail:"q.roeland@dtudents.ephec.be",nom:"livre de cours",localisation:"lln",prix:5},
                         {mail:"test@dtudents.ephec.be",nom:"livre de cours ",localisation:"lln",prix:5}],
                     "2" : [{mail:"moi@dtudents.ephec.be",nom:"mon premier livre",localisation:"wolluwe",prix:5}]};
-document.addEventListener('DOMContentLoaded', loadPage());
-function loadPage(){
+function loadPageO(){
+    let html='';
+    let comp = 1
     for (let i in OffreLivre){
-        
+        for (let j in OffreLivre[i]){
+            html += `<tr>
+                <td>N°${comp}</td>
+                <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
+                <td>${OffreLivre[i][j].nom}</td>
+                <td>${OffreLivre[i][j].etat}</td>
+                <td>${OffreLivre[i][j].description}</td>
+                <td>${OffreLivre[i][j].localisation}</td>
+                <td>${OffreLivre[i][j].prix}€</td>
+                <td>
+                    <form>  
+                        <a href="mailto:${OffreLivre[i][j].mail}?subject=livre occasion">contact</a>
+                    </form>
+                </td>
+            </tr>`
+            comp ++
+        }
+        document.getElementById("donneeTableau").innerHTML = html;
     }
 }
-
+function loadPageD(){
+    let html='';
+    let comp = 1
+    for (let i in OffreLivre){
+        for (let j in OffreLivre[i]){
+            html += `<tr>
+                <td>N°${comp}</td>
+                <td>${OffreLivre[i][j].nom}</td>
+                <td>${OffreLivre[i][j].localisation}</td>
+                <td>${OffreLivre[i][j].prix}€</td>
+                <td>
+                    <form>  
+                        <a href="mailto:${OffreLivre[i][j].mail}?subject=proposition livre ephec">contact</a>
+                    </form>
+                </td>
+            </tr>`
+            comp ++;
+        }
+        document.getElementById("donneeTableau").innerHTML = html;
+    }
+}
 function loadPageOffre() {
+    document.addEventListener('DOMContentLoaded', loadPageO());
     document.getElementById("rechercheOffre").addEventListener("click", rechercherOffre);
 }
 
 function loadPageDemande() {
+    document.addEventListener('DOMContentLoaded', loadPageD());
     document.getElementById("rechercheDemande").addEventListener("click", rechercherDemande);
 }
 
