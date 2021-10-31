@@ -1,14 +1,14 @@
-let OffreLivre = {"1" : [{mail:"q.roeland@dtudents.ephec.be",nom:"mon premier livre",localisation:"lln",etat:"neuf",prix:5,description:"livre de cours",image:"livre.png"},
-                      {mail:"test@dtudents.ephec.be",nom:"mon livre de cours",localisation:"lln",etat:"presque neuf",prix:6,description:"livre de cours",image:"livre.png"},
-                      {mail:"moi@dtudents.ephec.be",nom:"un livre",localisation:"lln",etat:"neuf",prix:5.5,description:"livre de cours",image:"livre.png"}],
-                  "2" : [{mail:"quelquun@dtudents.ephec.be",nom:"livre de math",localisation:"wolluwe",etat:"neuf",prix:5,description:"livre compléter",image:"livre.png"},
-                      {mail:"q.roeland@dtudents.ephec.be",nom:"mon premier livre",localisation:"wolluwe",etat:"utilise",prix:4,description:"livre de cours",image:"livre.png"}],
-                  "3" : [{mail:"test@dtudents.ephec.be",nom:"livre de python",localisation:"lln",etat:"neuf",prix:5,description:"livre de cours",image:"livre.png"},
-                      {mail:"etudiant@dtudents.ephec.be",nom:"livre de python",localisation:"wolluwe",etat:"neuf",prix:6,description:"livre de cours",image:"livre.png"},
-                      {mail:"moi@dtudents.ephec.be",nom:"livre de python",localisation:"lln",etat:"neuf",prix:5.4,description:"livre de cours",image:"livre.png"}]}
-let DemandeLivre = {"1" : [{mail:"q.roeland@dtudents.ephec.be",nom:"livre de cours",localisation:"lln",prix:5},
-                        {mail:"test@dtudents.ephec.be",nom:"livre de cours ",localisation:"lln",prix:5}],
-                    "2" : [{mail:"moi@dtudents.ephec.be",nom:"mon premier livre",localisation:"wolluwe",prix:5}]};
+let OffreLivre = {"1" : [{mail:"q.roeland@students.ephec.be",nom:"mon premier livre",localisation:"lln",etat:"neuf",prix:5,description:"livre de cours",image:"livre.png"},
+                      {mail:"test@students.ephec.be",nom:"mon livre de cours",localisation:"wolluwe",etat:"presque neuf",prix:6,description:"livre de cours",image:"livre.png"},
+                      {mail:"moi@students.ephec.be",nom:"un livre",localisation:"lln",etat:"neuf",prix:5.5,description:"livre de cours",image:"livre.png"}],
+                  "2" : [{mail:"quelquun@students.ephec.be",nom:"livre de math",localisation:"wolluwe",etat:"neuf",prix:5,description:"livre compléter",image:"livre.png"},
+                      {mail:"q.roeland@students.ephec.be",nom:"mon premier livre",localisation:"wolluwe",etat:"utilise",prix:4,description:"livre de cours",image:"livre.png"}],
+                  "3" : [{mail:"test@students.ephec.be",nom:"livre de python",localisation:"lln",etat:"neuf",prix:5,description:"livre de cours",image:"livre.png"},
+                      {mail:"etudiant@students.ephec.be",nom:"livre de python",localisation:"wolluwe",etat:"neuf",prix:6,description:"livre de cours",image:"livre.png"},
+                      {mail:"moi@students.ephec.be",nom:"livre de python",localisation:"lln",etat:"neuf",prix:5.4,description:"livre de cours",image:"livre.png"}]}
+let DemandeLivre = {"1" : [{mail:"q.roeland@students.ephec.be",nom:"livre de cours",localisation:"lln",prix:5},
+                        {mail:"test@students.ephec.be",nom:"livre de cours ",localisation:"lln",prix:5}],
+                    "2" : [{mail:"moi@students.ephec.be",nom:"mon premier livre",localisation:"wolluwe",prix:5}]};
 function loadPageO(){
     let html='';
     let comp = 1
