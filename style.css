@@ -155,19 +155,25 @@ footer hr {
 table{
     border-collapse:collapse;
     margin-top: 5px;
+    text-align: center;
+    border: none;
 }
 
 thead th{
-    background-color: #4814D5;
-    color: white;
+    color: black;
     font-size: larger;
     border:none;
+    min-width: 17ch;
+
+}
+tbody tr{
+    border: white;
 }
 tbody tr td{
-    border:1px solid black;
-    border-right: none;
-    border-left: none;
-    background-color: #BDBDBD;
+    background-color: #d9d9d9;
+    border:none;
+    /*border-right: none;
+    border-left: none;*/
 }
 
 tbody td{
@@ -198,7 +204,7 @@ label {
     text-align: center;
 }
 a{
- color: white;
+ color: black;
 }
 
 input:focus {

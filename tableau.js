@@ -1,4 +1,4 @@
-let OffreLivre = {"1":[{nom:"", mail:"",localisation:"lln", etat:"", prix:"", description:"", image:""}]}
+let OffreLivre = {"1":[{nom:"Livre 1", mail:"123@students.",localisation:"lln", etat:"", prix:"", description:"", image:""}]}
 let DemandeLivre = {"1":[{nom:"", mail:"",localisation:"wolluwe", etat:"", prix:"", description:"", image:""}]}
 
 function loadPageOffre() {
