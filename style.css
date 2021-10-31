@@ -141,6 +141,7 @@ footer hr {
     border-radius: 8px;
 }
 
+
 #rechercheOffre:hover {
     background: #4f5356;
 }
@@ -255,7 +256,7 @@ li a {
 }
 
 li a:hover {
-    background-color: gray;
+    background-color: #fc9236;
 }
 
 .droite{
