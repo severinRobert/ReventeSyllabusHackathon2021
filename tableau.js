@@ -36,16 +36,16 @@ function loadPageO(){
 function loadPageD(){
     let html='';
     let comp = 1
-    for (let i in OffreLivre){
-        for (let j in OffreLivre[i]){
+    for (let i in DemandeLivre){
+        for (let j in DemandeLivre[i]){
             html += `<tr>
                 <td>N°${comp}</td>
-                <td>${OffreLivre[i][j].nom}</td>
-                <td>${OffreLivre[i][j].localisation}</td>
-                <td>${OffreLivre[i][j].prix}€</td>
+                <td>${DemandeLivre[i][j].nom}</td>
+                <td>${DemandeLivre[i][j].localisation}</td>
+                <td>${DemandeLivre[i][j].prix}€</td>
                 <td>
                     <form>  
-                        <a href="mailto:${OffreLivre[i][j].mail}?subject=proposition livre ephec">contact</a>
+                        <a href="mailto:${DemandeLivre[i][j].mail}?subject=proposition livre ephec">contact</a>
                     </form>
                 </td>
             </tr>`
@@ -140,10 +140,9 @@ function triDemande(){
     let html = ""
     for (let i in OffreLivre[IDDuc]) {
         console.log(i)
-        if (DemandeLivre[IDDuc][i].localisation === document.getElementById("localisation").value) {
+        if (DemandeLivre[IDDuc][i].localisation == document.getElementById("localisation").value) {
             html += `<tr>
                 <td>N°${i}</td>
-                <td><img src="livre.jpg" alt="livre ephec" height="100" width="100"></td>
                 <td>${DemandeLivre[IDDuc][i].nom}</td>
                 <td>${DemandeLivre[IDDuc][i].localisation}</td>
                 <td>${DemandeLivre[IDDuc][i].prix}€</td>
@@ -162,7 +161,7 @@ function triOffre() {
     let loc = document.getElementById("localisation").value;
     let IDDuc = document.getElementById("offre").value;
     console.log(loc)
-    let html = ""
+    let html = "";
     for (let i in OffreLivre[IDDuc]) {
         console.log(i)
         if (OffreLivre[IDDuc][i].localisation === document.getElementById("localisation").value) {
